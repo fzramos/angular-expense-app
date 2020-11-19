@@ -7,20 +7,31 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+// Import the forms module
+import { FormsModule } from '@angular/forms'
+
 // Import for the shared module and ALL  of its components
 import { SharedModule } from './shared/shared.module';
+import { AddItemFormComponent } from './add-item-form/add-item-form.component';
+import { BudgetItemListComponent } from './budget-item-list/budget-item-list.component';
+import { BudgetItemCardComponent } from './budget-item-list/budget-item-card/budget-item-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    LoginComponent
+    LoginComponent,
+    AddItemFormComponent,
+    BudgetItemListComponent,
+    BudgetItemCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,9 +2,20 @@
     <h1>Budget Calculator</h1>
 </div>
 
-<p>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi illum 
-    consequuntur velit, nihil ipsam doloremque qui. Iusto nisi, quaerat, sit 
-    amet voluptatibus quia, enim necessitatibus deleniti odio eos temporibus 
-    dolorem!
-</p>
+<div class="total-budget-section">
+    <!-- TODO Create conditional color checking for h2 elements -->
+    <h2 class="red">100</h2>
+</div>
+
+<!-- Add item Section -->
+<!-- A list of all of our expenses and income -->
+<section class="add-item-section">
+    <div class="add-item-container">
+        <!-- TODO Add Angular Form for adding info -->
+        <app-add-item-form></app-add-item-form>
+
+    </div>
+</section>
+
+<hr style="margin-top: 0px;">
+<app-budget-item-list></app-budget-item-list>

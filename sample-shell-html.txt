@@ -1,21 +1,27 @@
-<mat-sidenav-container class="sidenav-container has-background-dark has-text-primary">
+<mat-sidenav-container class="sidenav-container"> 
+    <!--  has-background-dark has-text-primary -->
     ​
         <!--SideNav-->
-        <mat-sidenav #drawer class="sidenav has-background-dark has-text-primary" fixedInViewport
+        <!--  has-background-dark has-text-primary -->
+        <mat-sidenav #drawer class="sidenav" fixedInViewport
             [attr.role] = "(isHandset$ | async) ? 'dialog': 'navigation' "
             [mode] = "(isHandset$ | async) ? 'over' : 'side' "
             [opened] = "false"
         >
-        <mat-toolbar  class =" has-background-dark has-text-primary">Menu</mat-toolbar>
+        <mat-toolbar>Menu</mat-toolbar>
+        <!--   class =" has-background-dark has-text-primary" -->
         <mat-nav-list>
-            <a mat-list-item routerLink="/main" (click)="drawer.close()"  class ="has-text-primary">Home</a>
+            <a mat-list-item routerLink="/main" (click)="drawer.close()"  >Home</a>
+            <!-- class ="has-text-primary" -->
         </mat-nav-list>
     ​
         </mat-sidenav>
-        <mat-sidenav-content class =" has-background-dark has-text-primary">
+        <mat-sidenav-content>
+            <!--  class =" has-background-dark has-text-primary" -->
         <!--Top Toolbar-->
     ​
-        <mat-toolbar class =" has-background-dark has-text-primary">
+        <mat-toolbar>
+            <!--  class =" has-background-dark has-text-primary" -->
             <button type="button"
                 aria-label="Toggle sidenav"
                 mat-icon-button
