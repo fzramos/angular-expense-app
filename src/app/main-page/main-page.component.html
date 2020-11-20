@@ -4,7 +4,7 @@
 
 <div class="total-budget-section">
     <!-- TODO Create conditional color checking for h2 elements -->
-    <h2 class="red">100</h2>
+    <h2 [ngClass] = "{ 'red': totalBudget < 0, 'green': totalBudget > 0}">{{ totalBudget }}</h2>
 </div>
 
 <!-- Add item Section -->
@@ -12,10 +12,9 @@
 <section class="add-item-section">
     <div class="add-item-container">
         <!-- TODO Add Angular Form for adding info -->
-        <app-add-item-form></app-add-item-form>
-
+        <app-add-item-form style="padding: 20px" (formSubmit) = "addItem($event)"></app-add-item-form>
     </div>
 </section>
 
 <hr style="margin-top: 0px;">
-<app-budget-item-list></app-budget-item-list>
+<app-budget-item-list [budgetItems] = "budgetItems" (delete) = "deleteItem($event)" (update) = "updateItem($event)"></app-budget-item-list>

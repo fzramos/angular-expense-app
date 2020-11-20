@@ -24,7 +24,7 @@
 .total-budget-section{
     display: flex;
     height: 250px;
-    background: $dark;
+    background: darken($dark, 5%);
     border-style: dashed;
     border-color: $purple;
 
